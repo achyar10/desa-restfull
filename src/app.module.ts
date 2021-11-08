@@ -7,6 +7,10 @@ import { AuthModule } from './app/auth/auth.module';
 import { UserModule } from './app/user/user.module';
 import { RtModule } from './app/rt/rt.module';
 import { RwModule } from './app/rw/rw.module';
+import { EducationModule } from './app/education/education.module';
+import { WorkModule } from './app/work/work.module';
+import { ReligionModule } from './app/religion/religion.module';
+import { MaritalModule } from './app/marital/marital.module';
 
 @Module({
   imports: [
@@ -21,6 +25,10 @@ import { RwModule } from './app/rw/rw.module';
     AuthModule,
     RwModule,
     RtModule,
+    EducationModule,
+    WorkModule,
+    ReligionModule,
+    MaritalModule,
   ],
   controllers: [AppController],
   providers: [AppService],
