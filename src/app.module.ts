@@ -14,6 +14,7 @@ import { MaritalModule } from './app/marital/marital.module';
 import { FamilyCardModule } from './app/family/family.module';
 import { RelationshipModule } from './app/relationship/relationship.module';
 import { CitizenModule } from './app/citizen/citizen.module';
+import { SettingModule } from './app/setting/setting.module';
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { CitizenModule } from './app/citizen/citizen.module';
     RelationshipModule,
     FamilyCardModule,
     CitizenModule,
+    SettingModule
   ],
   controllers: [AppController],
   providers: [AppService],
