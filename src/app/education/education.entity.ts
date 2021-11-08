@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Citizen } from "../citizen/citizen.entity";
 
 @Entity('education')
 export class Education {
@@ -13,4 +14,7 @@ export class Education {
 
     @UpdateDateColumn({ type: 'timestamp' })
     updated_at: Date;
+
+    @OneToMany(() => Citizen, data => data.education, { onDelete: 'CASCADE' })
+    citizens: Citizen[];
 }

@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, RelationId, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, RelationId, UpdateDateColumn } from "typeorm";
+import { FamilyCard } from "../family/family.entity";
 import { Rw } from "../rw/rw.entity";
 
 @Entity('master_rts')
@@ -27,6 +28,9 @@ export class Rt {
 
     @RelationId((rt: Rt) => rt.rw)
     rw_id: number;
+
+    @OneToMany(() => FamilyCard, data => data.rt, { onDelete: 'CASCADE' })
+    family_cards: FamilyCard[];
 
 
 }

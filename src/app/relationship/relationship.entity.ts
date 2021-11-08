@@ -1,8 +1,8 @@
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Citizen } from "../citizen/citizen.entity";
 
-@Entity('works')
-export class Work {
+@Entity('relationships')
+export class Relationship {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -15,6 +15,6 @@ export class Work {
     @UpdateDateColumn({ type: 'timestamp' })
     updated_at: Date;
 
-    @OneToMany(() => Citizen, data => data.work, { onDelete: 'CASCADE' })
+    @OneToMany(() => Citizen, data => data.relationship, { onDelete: 'CASCADE' })
     citizens: Citizen[];
 }

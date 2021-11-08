@@ -11,6 +11,9 @@ import { EducationModule } from './app/education/education.module';
 import { WorkModule } from './app/work/work.module';
 import { ReligionModule } from './app/religion/religion.module';
 import { MaritalModule } from './app/marital/marital.module';
+import { FamilyCardModule } from './app/family/family.module';
+import { RelationshipModule } from './app/relationship/relationship.module';
+import { CitizenModule } from './app/citizen/citizen.module';
 
 @Module({
   imports: [
@@ -29,6 +32,9 @@ import { MaritalModule } from './app/marital/marital.module';
     WorkModule,
     ReligionModule,
     MaritalModule,
+    RelationshipModule,
+    FamilyCardModule,
+    CitizenModule,
   ],
   controllers: [AppController],
   providers: [AppService],
